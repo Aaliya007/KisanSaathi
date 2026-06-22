@@ -4,7 +4,6 @@ import {
   ArrowRight,
   AudioLines,
   Brain,
-  Globe2,
   Mic,
   MessageCircleQuestion,
   Sparkles,
@@ -19,7 +18,6 @@ import logo from '../assets/logo.png'
 const navLinks = [
   { label: 'Features', href: '#features' },
   { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Languages', href: '#languages' },
 ]
 
 const steps = [
@@ -78,19 +76,6 @@ const features = [
     description: 'Advisory delivered back as natural speech. Warm, clear, local language voice output.',
     glow: 'from-green-400/30 to-emerald-300/20',
   },
-]
-
-const languages = [
-  'Hindi',
-  'Tamil',
-  'Telugu',
-  'Kannada',
-  'Marathi',
-  'Bengali',
-  'Gujarati',
-  'Punjabi',
-  'Odia',
-  'Malayalam',
 ]
 
 const stats = [
@@ -277,8 +262,8 @@ function Navbar() {
           <button
             onClick={() => navigate('/diagnosis')}
             className={`group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white transition hover:scale-[1.02] ${
-              scrolled 
-                ? 'bg-gradient-to-r from-[#2d6a4f] via-[#40916c] to-[#52b788] shadow-[0_14px_28px_rgba(45,106,79,0.25)]' 
+              scrolled
+                ? 'bg-gradient-to-r from-[#2d6a4f] via-[#40916c] to-[#52b788] shadow-[0_14px_28px_rgba(45,106,79,0.25)]'
                 : 'bg-white/20 hover:bg-white/30 border border-white/20 backdrop-blur'
             }`}
           >
@@ -337,8 +322,8 @@ function HeroPanel() {
   const chips = [
     { icon: <Mic className="h-4 w-4" />, text: 'Voice input' },
     { icon: <Brain className="h-4 w-4" />, text: 'AI diagnosis' },
-    { icon: <Globe2 className="h-4 w-4" />, text: 'Regional languages' },
     { icon: <Volume2 className="h-4 w-4" />, text: 'Spoken guidance' },
+    { icon: <Waves className="h-4 w-4" />, text: 'Live follow-up flow' },
   ]
 
   return (
@@ -562,7 +547,7 @@ export default function LandingPage() {
                   </motion.button>
 
                   <p className="text-sm text-white/75">
-                    No typing. No app literacy required. 
+                    No typing. No app literacy required.
                   </p>
                 </motion.div>
 
@@ -692,44 +677,6 @@ export default function LandingPage() {
             </div>
           </section>
 
-          <section
-            id="languages"
-            className="relative overflow-hidden bg-[linear-gradient(135deg,#163c26_0%,#1a4a2e_45%,#2d6a4f_100%)] px-5 py-12 text-white sm:px-6 lg:px-8"
-          >
-            <motion.div
-              animate={{ x: ['-10%', '10%', '-10%'] }}
-              transition={{ duration: 16, repeat: Infinity, ease: 'linear' }}
-              className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_20%_20%,rgba(149,213,178,0.45),transparent_18%),radial-gradient(circle_at_80%_30%,rgba(233,196,106,0.35),transparent_20%),radial-gradient(circle_at_50%_80%,rgba(82,183,136,0.3),transparent_18%)]"
-            />
-
-            <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#d8f3dc]">
-                  Languages supported
-                </p>
-                <h2 className="mt-2 font-display text-3xl sm:text-4xl">
-                  Speaks Your Language
-                </h2>
-                <p className="mt-3 max-w-2xl text-white/80">
-                  22 official languages. KisanSaathi understands your voice, your words, and your context.
-                </p>
-              </div>
-
-              <div className="flex max-w-3xl flex-wrap gap-3">
-                {languages.map((language, index) => (
-                  <motion.span
-                    key={language}
-                    whileHover={{ y: -4, scale: 1.03 }}
-                    className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white shadow-sm backdrop-blur"
-                  >
-                    {index === 0 ? '🇮🇳 ' : ''}
-                    {language}
-                  </motion.span>
-                ))}
-              </div>
-            </div>
-          </section>
-
           <section className="px-5 py-20 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.2rem] border border-white/60 bg-[linear-gradient(135deg,_#d8f3dc_0%,_#edf8f1_45%,_#fff7df_100%)] px-6 py-10 shadow-[0_24px_80px_rgba(45,106,79,0.10)] sm:px-10 lg:px-12 lg:py-12">
               <div className="mb-8 flex items-center gap-3">
@@ -837,7 +784,6 @@ export default function LandingPage() {
               <div className="mt-4 flex flex-col gap-3 text-sm text-white/80">
                 <a href="#features">Features</a>
                 <a href="#how-it-works">How It Works</a>
-                <a href="#languages">Languages</a>
                 <a href="#about">About</a>
               </div>
             </div>
