@@ -276,6 +276,9 @@ Converts AI responses into audio for farmers who prefer listening over reading.
 ### Backend Development
 - Varnit Jain
 
+### AI Pipeline
+- Reyansh Kohli
+
 ### Project
 **KisanSaathi – AI-Powered Crop Disease Diagnosis Assistant**
 
