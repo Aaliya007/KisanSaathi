@@ -14,8 +14,7 @@ import {
 } from 'lucide-react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
-// Import your logo from the src folder
-import logoImg from './logo.png'
+import logo from '../assets/logo.png'
 
 const navLinks = [
   { label: 'Features', href: '#features' },
@@ -244,14 +243,14 @@ function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8">
-        <Link to="/" className="group flex items-center gap-3">
-          <div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[#2d6a4f] via-[#40916c] to-[#95d5b2] text-white shadow-[0_12px_30px_rgba(45,106,79,0.28)]">
-            <img 
-              src={logoImg} 
-              alt="KisanSaathi Logo" 
-              className="h-full w-full object-contain p-1.5" 
+        <Link to="/" className="group flex items-center gap-5">
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-[20px] sm:h-16 sm:w-16 sm:rounded-[24px] lg:h-20 lg:w-20 lg:rounded-[28px]">
+            <img
+              src={logo}
+              alt="KisanSaathi Logo"
+              className="h-full w-full object-cover object-center scale-105"
+              draggable={false}
             />
-            <div className="absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.24),transparent)] opacity-0 transition duration-500 group-hover:opacity-100" />
           </div>
           <div>
             <div className={`text-xl font-extrabold tracking-tight transition-colors duration-300 ${scrolled ? 'text-[#1b4332]' : 'text-white'}`}>
